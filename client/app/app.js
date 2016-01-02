@@ -9,9 +9,13 @@ app.config(['$routeProvider', function(routeProvider){
   
   routeProvider
     .when('/add',{
-      templateUrl: '../views/add.html',
+      templateUrl: 'views/add.html',
       controller: 'addController'
     })
+    .when('/search',{
+      templateUrl: 'views/search.html',
+      controller: ''
+    });
     
 
 }]);

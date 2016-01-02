@@ -1,4 +1,31 @@
-<form role="form">
+<style>
+   #search-results-wrapper {
+    text-align: center;
+   }
+   .image-wrapper {
+    position: relative;
+    margin:0 auto;
+    height:auto;
+    width:200px;
+   }
+
+   .image-wrapper img {
+    height:100%;
+    width:100%;
+   }
+
+   .image-description {
+    background: white;
+    border:1px solid black;
+    width:100%;
+    position: absolute;
+    left:0px;
+    bottom:-12px;
+   }
+
+</style>
+
+<form ng-controller='searchController' role="form">
   <div class="form-group">
     <label for="search">Search Image</label>
     <input type="text" class="form-control" id="search">
@@ -8,7 +35,12 @@
   <div style='clear:both'></div>
 </form>
 
-<h1>Lists</h1>
-<ul class="list-group">
-  <li class="list-group-item">Hello<img src='' /></li>
-</ul>
+<div id='search-results-wrapper'>
+  
+  <div class='image-wrapper'>
+    <img src='http://pbs.twimg.com/media/BC8zLdBCEAIFv3b.jpg:large'/></li>
+    <p class='image-description'>Beautiful Ladies</p>
+  </div>
+
+</div>
+

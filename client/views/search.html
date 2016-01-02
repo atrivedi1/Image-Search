@@ -6,21 +6,21 @@
     position: relative;
     margin:0 auto;
     height:auto;
-    width:200px;
+    width:400px;
    }
 
    .image-wrapper img {
-    height:100%;
-    width:100%;
+    display: block;
+    width: 400px;
+    height: auto;
    }
 
    .image-description {
     background: white;
-    border:1px solid black;
     width:100%;
     position: absolute;
     left:0px;
-    bottom:-12px;
+    bottom: 0px;
    }
 
 </style>
@@ -28,18 +28,18 @@
 <form ng-controller='searchController' role="form">
   <div class="form-group">
     <label for="search">Search Image</label>
-    <input type="text" class="form-control" id="search">
+    <input type="text" class="form-control" id="search" ng-model="searchTag">
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" ng-click="searchImage()">Submit</button>
   <div style='clear:both'></div>
 </form>
 
 <div id='search-results-wrapper'>
   
   <div class='image-wrapper'>
-    <img src='http://pbs.twimg.com/media/BC8zLdBCEAIFv3b.jpg:large'/></li>
-    <p class='image-description'>Beautiful Ladies</p>
+    <img ng-model="imageUrl" src='{{ imageUrl }}'/>
+    <p class='image-description' ng-model="description">{{ description }}</p>
   </div>
 
 </div>

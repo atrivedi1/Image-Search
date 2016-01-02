@@ -16,6 +16,4 @@ app.config(['$routeProvider', function(routeProvider){
       templateUrl: 'views/search.html',
       controller: ''
     });
-    
-
 }]);
